@@ -1,14 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import '../assets/css/app.css';
-import logo from '../assets/images/logo.svg';
 
-const App = () => (
-    <div>
-        <div className="app">
-            <img src={logo} className="logo rotate" />
-            <h1>Welcome to React</h1>
-        </div>
-    </div>
-);
+import Form from "./form";
+import Header from './header';
+import Table from './table';
+
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            students: []
+        }
+        console.log("props from app: ", props)
+    }
+    render() {
+        return (
+            <div className="container">
+                <Header />
+                <div className="row">
+                    <Form user={this.state} />
+                    <Table />
+                </div>
+            </div>
+        );
+    }
+}
 
 export default App;

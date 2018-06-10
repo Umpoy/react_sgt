@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-.app {
+/* .app {
     background-color: #000;
     color: #fff;
     font-family: blocky;
@@ -23,17 +23,17 @@ body {
 .app h1 {
     text-shadow: 0 0 28px #61DAFB;
     letter-spacing: 5px;
+} */
+
+small {
+    float: right;
+    color: grey;
+    font-size: 65%;
 }
 
-.rotate {
-    animation: spin 10s linear infinite;
-}
+.page-header {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
 }
