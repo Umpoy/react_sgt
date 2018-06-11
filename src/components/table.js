@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import $ from "jquery";
+
+import StudentList from "./student_list";
 
 class Table extends Component {
     constructor(props) {
         super(props);
-        // this.props.user.test = 'ian'
-        // console.log("props from table: ", this.props.user)
+        console.log('from table: ', this.props.value.students)
+    }
+
+    renderStudent() {
+        this.props.value.students.map((student) => {
+            return <StudentList student={student} />
+        })
     }
 
     render() {
@@ -19,13 +28,17 @@ class Table extends Component {
                             <th>Operations</th>
                         </tr>
                     </thead>
-                    <tbody>
-
+                    <tbody id="tbody">
+                        {this.renderStudent()}
                     </tbody>
                 </table>
             </div>
         )
     }
 }
+
+
+
+
 
 export default Table;

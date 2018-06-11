@@ -11,17 +11,26 @@ class App extends Component {
         super(props);
 
         this.state = {
-            students: []
+            students: [{
+                name: "Ian",
+                course: "Swaggness101",
+                grade: "100"
+            },
+            {
+                name: "Ian",
+                course: "Swaggness102",
+                grade: "100"
+            }],
         }
-        console.log("props from app: ", props)
+        console.log("props from app: ", this.state)
     }
     render() {
         return (
             <div className="container">
                 <Header />
                 <div className="row">
-                    <Form user={this.state} />
-                    <Table />
+                    <Form value={this.state} />
+                    <Table value={this.state} />
                 </div>
             </div>
         );
