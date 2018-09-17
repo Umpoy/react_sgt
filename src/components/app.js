@@ -3,7 +3,11 @@ import '../assets/css/app.css';
 
 class App extends Component {
     render() {
-        return <h1>Hello World</h1>
+        return (
+            <div className="container">
+                <h1 className="text-center">Grade Table</h1>
+            </div>
+        )
     }
 }
 
