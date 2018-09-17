@@ -1,21 +1,25 @@
 export default [
     {
-        student_name: "Barry Allen",
+        firstName: "Barry",
+        lastName: "Allen",
         student_course: "The Study of Speed",
         student_grade: 100
     },
     {
-        student_name: "Aurther Curry",
+        firstName: "Arthur",
+        lastName: "Curry",
         student_course: "Swim Class",
         student_grade: 100
     },
     {
-        student_name: "Clark Kent",
+        firstName: "Clark",
+        lastName: "Kent",
         student_course: "Body Building",
         student_grade: 100
     },
     {
-        student_name: "Oliver Queen",
+        firstName: "Oliver",
+        lastName: "Queen",
         student_course: "Archery",
         student_grade: 100
     },
