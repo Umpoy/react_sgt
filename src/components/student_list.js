@@ -5,15 +5,24 @@ import studentData from '../data/students';
 class StudentList extends Component {
     constructor(props) {
         super(props);
+
         this.state = {
             students: studentData
         }
     }
+
     render() {
         const list = this.state.students.map((item, index) => {
-            return <StudentCard key={index} firstName={item.firstName} lastName={item.lastName} />
+            return <StudentCard key={index} contact={item} />
         });
-        return <div>{list}</div>
+
+        return (
+            <div className="col-8">
+                <div className="row">
+                    {list}
+                </div>
+            </div>
+        )
     }
 }
 
