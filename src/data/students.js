@@ -2,25 +2,25 @@ export default [
     {
         firstName: "Barry",
         lastName: "Allen",
-        student_course: "The Study of Speed",
-        student_grade: 100
+        studentCourse: "The Study of Speed",
+        studentGrade: 100
     },
     {
         firstName: "Arthur",
         lastName: "Curry",
-        student_course: "Swim Class",
-        student_grade: 100
+        studentCourse: "Swim Class",
+        studentGrade: 100
     },
     {
         firstName: "Clark",
         lastName: "Kent",
-        student_course: "Body Building",
-        student_grade: 100
+        studentCourse: "Body Building",
+        studentGrade: 100
     },
     {
         firstName: "Oliver",
         lastName: "Queen",
-        student_course: "Archery",
-        student_grade: 100
+        studentCourse: "Archery",
+        studentGrade: 100
     },
 ];

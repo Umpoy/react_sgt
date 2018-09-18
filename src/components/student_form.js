@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Field from "./field";
 
 class StudentForm extends Component {
     constructor(props) {
@@ -6,7 +7,9 @@ class StudentForm extends Component {
         this.state = {
             form: {
                 firstName: '',
-                lastName: ''
+                lastName: '',
+                studentCourse: '',
+                studentGrade: ''
             }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
@@ -28,19 +31,15 @@ class StudentForm extends Component {
     }
 
     render() {
-        const { firstName, lastName } = this.state.form;
+        const { firstName, lastName, studentCourse, studentGrade } = this.state.form;
         return (
             <form onSubmit={this.handleSubmit}>
-                <div className="form-group">
-                    <label>First Name</label>
-                    <input name="firstName" type="text" className="form-control" value={firstName} onChange={this.handleInputChange} />
-                </div>
-                <div className="form-group">
-                    <label>Last Name</label>
-                    <input name="lastName" type="text" className="form-control" value={lastName} onChange={this.handleInputChange} />
-                </div>
+                <Field name="firstName" label="First Name" type="text" value={firstName} onChange={this.handleInputChange} />
+                <Field name="lastName" label="Last Name" type="text" value={lastName} onChange={this.handleInputChange} />
+                <Field name="studentCourse" label="Student Course" type="text" value={studentCourse} onChange={this.handleInputChange} />
+                <Field name="studentGrade" label="Student Grade" type="text" value={studentGrade} onChange={this.handleInputChange} />
                 <button>Add Student</button>
-            </form>
+            </form >
         );
     }
 }
