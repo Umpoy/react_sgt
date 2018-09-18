@@ -10,8 +10,10 @@ class StudentList extends Component {
         }
     }
     render() {
-        console.log("Student Data", this.state.students)
-        return <h1>Sometext</h1>
+        const list = this.state.students.map((item, index) => {
+            return <StudentCard key={index} firstName={item.firstName} lastName={item.lastName} />
+        });
+        return <div>{list}</div>
     }
 }
 
