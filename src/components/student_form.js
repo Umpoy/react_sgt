@@ -10,6 +10,7 @@ class StudentForm extends Component {
             }
         };
         this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleInputChange(event) {
@@ -21,10 +22,15 @@ class StudentForm extends Component {
         });
     }
 
+    handleSubmit(event) {
+        event.preventDefault();
+        console.log('handleSubmit called, form values are:', this.state.form);
+    }
+
     render() {
         const { firstName, lastName } = this.state.form;
         return (
-            <form>
+            <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>First Name</label>
                     <input name="firstName" type="text" className="form-control" value={firstName} onChange={this.handleInputChange} />
@@ -33,6 +39,7 @@ class StudentForm extends Component {
                     <label>Last Name</label>
                     <input name="lastName" type="text" className="form-control" value={lastName} onChange={this.handleInputChange} />
                 </div>
+                <button>Add Student</button>
             </form>
         );
     }
