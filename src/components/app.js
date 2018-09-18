@@ -11,6 +11,15 @@ class App extends Component {
         this.state = {
             students: studentData
         }
+        this.addContact = this.addContact.bind(this);
+    }
+
+    addContact(student) {
+        console.log('App: addComponent:', student);
+
+        this.setState({
+            students: [student, ...this.state.students]
+        })
     }
 
     render() {
@@ -19,7 +28,7 @@ class App extends Component {
                 <h1 className="text-center my-3">Grade Table</h1>
                 <div className="row">
                     <div className="col-4">
-                        <StudentForm />
+                        <StudentForm add={this.addContact} />
                     </div>
                     <StudentList students={this.state.students} />
 
