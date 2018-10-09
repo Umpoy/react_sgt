@@ -28,8 +28,6 @@ class StudentForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        console.log('handleSubmit called, form values are:', this.state.form);
-
         this.props.add(this.state.form);
     }
 
@@ -52,8 +50,8 @@ class StudentForm extends Component {
                 <Field name="lastName" label="Last Name" type="text" value={lastName} onChange={this.handleInputChange} />
                 <Field name="studentCourse" label="Student Course" type="text" value={studentCourse} onChange={this.handleInputChange} />
                 <Field name="studentGrade" label="Student Grade" type="text" value={studentGrade} onChange={this.handleInputChange} />
-                <button>Add Student</button>
-                <button type="button" onClick={this.reset}>Reset</button>
+                <button className="form-control btn btn-primary">Add Student</button>
+                <button className="form-control btn btn-danger" type="button" onClick={this.reset}>Reset</button>
             </form >
         );
     }
