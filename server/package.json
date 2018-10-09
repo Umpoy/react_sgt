@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "nodemon": "^1.18.4"
+    "nodemon": "^1.18.4",
+    "passport-facebook": "^2.1.1"
   }
 }
